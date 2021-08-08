@@ -4,7 +4,6 @@
   border: none;
 }
 
-
 .hidden {display: none; }
 
 body {
@@ -43,24 +42,29 @@ svg {width: 100%;}
 .projectHeader { margin: 30px 0 10px; font-size: 2em;}
 .projectHeader, .projectSubheader { text-align: center;}
 
-.zoomAnimation { animation: zoomAnimation 2.5s forwards;}
+.characterAnimation { animation: characterAnimation 5s forwards;}
 
-.textVector {
+.oogway {
   position: absolute;
   top: 139px;
-  left: 255px;
+  margin-left: 10%;
   height: 300px;
 
   opacity: 0;
-  animation-delay: 2s;
+  animation-delay: 0.5s;
 }
 
-@keyframes zoomAnimation {
+@keyframes characterAnimation {
   0% { opacity: 0;}
-  10% { opacity: 1;}
+  10% { opacity: 1;transform: rotate(0deg);}
+  20% { transform: rotate(10deg);}
   30% { transform: rotate(0deg);}
-  50% { transform: rotate(10deg);}
+  40% { transform: rotate(10deg);}
+  50% { transform: rotate(0deg);}
+  60% { transform: rotate(0deg);}
+  70% { transform: rotate(10deg);}
   80% { transform: rotate(0deg);}
-  100% {opacity: 1; transform: rotate(10deg);}
+  90% { transform: rotate(10deg);}
+  100% {opacity: 1;transform: rotate(0deg);}
 
 }
