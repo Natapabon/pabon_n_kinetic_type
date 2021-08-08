@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.hidden {display: none; }
+
+body {
+  background-color: #F2F1EB;
+  color: black;
+
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 100%;
+}
+
+/* SVG section for Type animation */
+
+.typeWrapper{
+  width: 530px;
+  background-color: #fff;
+  border: solid #CCCA97;
+  margin: 0 auto;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.type { margin-top:12px;}
+
+svg {width: 100%;}
+
+  /* SVG animation */
+#typeLayout g { opacity: 0; }
+
+  /* individual SVG animation */
+
+#quit { animation-delay: 1s;}
+#noodles { animation-delay: 3s;}
+#concerned { animation-delay: 7s;}
+#willBe { animation-delay: 9.5s;}
+#yesterday { animation-delay: 12.5s;}
+#tomorrow { animation-delay: 17s;}
+#but { animation-delay: 19s;}
+#today { animation-delay: 19.5s;}
+#called { animation-delay: 22s;}
+#present { animation-delay: 23.2s;}
+
+.text-anim { animation: fadewords 0.2s forwards;}
+
+/* SVG section ends */
+
+.controls { text-align: center; }
+
+.controls button {
+  padding: 20px;
+  background-color: #CCCA97;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin-top:  1.5em;
+  border-radius: 1em;
+}
+
+.controls button:hover {
+  background-color: #fff;
+  color: #CCCA97;
+}
+
+.projectHeader { margin: 30px 0 10px; font-size: 2em;}
+.projectHeader, .projectSubheader { text-align: center;}
+
+.characterAnimation { animation: characterAnimation 5s forwards;}
+
+.oogway {
+  position: absolute;
+  top: 5px;
+  margin-left: -25%;
+  height: 400px;
+
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadewords {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.containerTurn {
+  animation:
+  turnConQuit 2s linear 1s forwards,
+  turnConNoodles 4s linear 3s forwards,
+  turnConConcern 9.5s linear 7s forwards,
+  turnConWillBe 3s linear 9.5s forwards,
+  turnConYesterday 4.5s linear 12.5s forwards,
+  turnConTomorrow 2s linear 17s forwards,
+  turnConBut 0.5s linear 19s forwards,
+  turnConToday 2.5s linear 19.5s forwards,
+  turnConCalled 2.5s linear 22s forwards,
+  turnConPresent 1.2s linear 23.2s forwards;
+}
+
+/* containerTurn animation steps  STARTS*/
+
+@keyframes turnConQuit {
+  0% {transform: rotate(0deg) scale(1.8) translate(40%,20%);}
+  100% {transform: rotate(0deg) scale(1.8) translate(40%,20%);}
+}
+
+@keyframes turnConNoodles {
+  0% {transform: rotate(0deg) scale(1.8) translate(40%,20%);}
+  20% {transform: rotate(-90deg) scale(2) translate(35%,-10%);}
+  100% {transform: rotate(-90deg) scale(2) translate(35%,-10%);}
+}
+@keyframes turnConConcern {
+  0% {transform: rotate(-90deg) scale(2) translate(35%,-10%);}
+  5% {transform: rotate(0deg) scale(2) translate(25%,-20%);}
+  100% {transform: rotate(0deg) scale(2) translate(25%,-20%);}
+}
+@keyframes turnConWillBe {
+  0% {transform: rotate(0deg) scale(2) translate(25%,-20%);}
+  10% {transform: rotate(0deg) scale(2) translate(-12%,-20%);}
+  100% {transform: rotate(0deg) scale(2) translate(-12%,-20%);}
+}
+@keyframes turnConYesterday {
+  0% {transform: rotate(0deg) scale(2) translate(-12%,-20%);}
+  20% {transform: rotate(90deg) scale(2.2) translate(-40%,-30%);}
+  100% {transform: rotate(90deg) scale(2.2) translate(-40%,-30%);}
+}
+@keyframes turnConTomorrow {
+  0% {transform: rotate(90deg) scale(2.2) translate(-40%,-30%);}
+  20% {transform: rotate(180deg) scale(2) translate(-20%,0%);}
+  100% {transform: rotate(180deg) scale(2) translate(-20%,0%);}
+}
+@keyframes turnConBut {
+  0% {transform: rotate(180deg) scale(2) translate(-20%,0%);}
+  100% {transform: rotate(180deg) scale(3) translate(-2%,25%);}
+}
+@keyframes turnConToday {
+  0% {transform: rotate(180deg) scale(3) translate(-2%,25%);}
+  20% {transform: rotate(180deg) scale(2) translate(-5%,30%);}
+  100% {transform: rotate(180deg) scale(2) translate(-5%,30%);}
+}
+@keyframes turnConCalled {
+  0% {transform: rotate(180deg) scale(2) translate(-5%,30%);}
+  20% {transform: rotate(90deg) scale(3) translate(-20%,20%);}
+  100% {transform: rotate(90deg) scale(3) translate(-20%,20%);}
+}
+@keyframes turnConPresent {
+  0% {transform: rotate(90deg) scale(3) translate(-20%,20%);}
+  20% {transform: rotate(90deg) scale(2.2) translate(-27%,20%);}
+  100% {transform: rotate(90deg) scale(2.2) translate(-27%,20%);}
+}
+
+/* containerTurn animation steps  ENDS*/
+
+@keyframes characterAnimation {
+  0% { opacity: 0;}
+  10% { opacity: 1;transform: rotate(0deg);}
+  20% { transform: rotate(10deg);}
+  30% { transform: rotate(0deg);}
+  40% { transform: rotate(10deg);}
+  50% { transform: rotate(0deg);}
+  60% { transform: rotate(0deg);}
+  70% { transform: rotate(10deg);}
+  80% { transform: rotate(0deg);}
+  90% { transform: rotate(10deg);}
+  100% {opacity: 1;transform: rotate(0deg);}
+
+}
