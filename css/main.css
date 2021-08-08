@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
 .hidden {display: none; }
 
 body {
@@ -6,6 +13,31 @@ body {
 
   font-family: Arial, helvetica, sans-serif;
   font-size: 100%;
+}
+
+/* SVG section for Type animation */
+.type { margin-top:12px;}
+
+.typeWrapper{
+  width: 530px;
+  border: thin solid black;
+  margin: 0 auto;
+  overflow: hidden;
+
+  position: relative;
+}
+
+svg {width: 100%;}
+
+/* SVG section ends */
+
+.controls { text-align: center; }
+
+.controls button {
+  padding: 20px;
+  cursor: pointer;
+  margin-top:  1.5em;
+  border-radius: 1em;
 }
 
 .projectHeader { margin: 30px 0 10px; font-size: 2em;}
